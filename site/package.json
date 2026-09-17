@@ -9,7 +9,8 @@
     "dev": "next dev",
     "prebuild": "npm run catalog",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit --incremental false"
   },
   "dependencies": {
     "lucide-react": "^0.475.0",
@@ -25,6 +26,6 @@
     "@types/react-dom": "^19.1.0",
     "postcss": "^8.5.0",
     "tailwindcss": "^4.1.0",
-    "typescript": "^5.8.0"
+    "typescript": "7.0.2"
   }
 }
