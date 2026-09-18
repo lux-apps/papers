@@ -60,9 +60,9 @@ and the contract decodes five of its seven fields and drops both counts
 economic mechanism built on top of it, including the buyback that is supposed to give the token
 value, inherits that defect.
 
-The economics around it are legible and unflattering. MOR trades at \$1.95, a market
-capitalization near \$17M, with 24-hour volume of \$8,905 \prov{verified}. Tradeable DEX
-liquidity is \$1,411,470, of which the protocol itself owns 88.8\% \prov{verified}. Real
+The economics around it are legible and unflattering. MOR trades at \$1.58, a market
+capitalization near \$14M, with 24-hour volume of \$57,314 \prov{verified}. Tradeable DEX
+liquidity is about \$1.32M, most of it owned by the protocol itself \prov{verified}. Real
 external revenue, the Lido and Aave yield skimmed from deposits, was about \$476K over the
 trailing four quarters and is falling \prov{verified}; MOR emission over the same period is
 valued near \$5M to \$6M \prov{verified}. Emission outruns revenue by roughly ten to one. The
@@ -184,15 +184,15 @@ On scale, the hosted gateway funds every Web2 caller from one shared consumer wa
 nonce conflict on a session open or close the path serializes, and throughput clears a few
 sessions per second \prov{verified}. That is an architectural ceiling, not a tuning knob.
 
-The concentration and liquidity facts, read from chain on 2026-08-29 and presented as risks to
+The concentration facts, read from chain on 2026-08-29 (market figures as of 2026-09-18), presented as risks to
 depositors rather than as accusations of intent. Existing supply is 9,286,960 MOR (Base 63\%,
-Arbitrum 36\%, Ethereum under 1\%) \prov{verified}. Price was \$1.95, market capitalization
-\$16.96M, 24-hour volume \$8,905, down 63.9\% on the year and 98.6\% from the all-time high
+Arbitrum 36\%, Ethereum under 1\%) \prov{verified}. Price is \$1.58, market capitalization
+\$14.32M, 24-hour volume \$57,314, down 65.2\% on the year and 98.9\% from the all-time high
 \prov{verified}. The Compute Reserve multisig holds roughly 2.87M MOR, 30.9\% of all MOR
 \prov{verified}; the top ten holders on Base are 93.6\% of Base supply \prov{verified}. Tradeable
-DEX liquidity is \$1,411,470, of which the protocol owns 88.8\%, with a protocol-owned-liquidity
-Safe holding 99.98\% of the main pool's active liquidity \prov{verified}. Daily volume is 0.63\%
-of liquidity; a \$100,000 sell equals about eleven days of total market volume \prov{derived}.
+DEX liquidity is about \$1.32M, most of it protocol-owned, with a protocol-owned-liquidity
+Safe holding 99.98\% of the main pool's active liquidity \prov{verified}. Daily volume is about 4\%
+of liquidity; a \$100,000 sell equals nearly two days of total market volume \prov{derived}.
 Price discovery and exit both depend on liquidity the protocol controls. This is a fragility any
 depositor should be able to see stated plainly, and it is one a governance and liquidity plan
 (ADOPT-03, ADOPT-06) should address.
@@ -268,7 +268,7 @@ SET-3 without moving a single asset off Base.
 
 \textbf{Tier 2, value and governance.} A timelock and a vote surface move control off the bare
 multisig (ADOPT-03). A fee on verified volume funds the buyback from usage instead of deposits
-(ADOPT-08). An order-book venue deepens a book that is 88.8\% protocol-owned (ADOPT-06).
+(ADOPT-08). An order-book venue deepens a book that is mostly protocol-owned (ADOPT-06).
 Self-repaying credit puts the idle stETH and MOR to work without a forced sale (ADOPT-04). A
 bank rail brings fiat-native consumers in (ADOPT-05, the smallest dependency in the set).
 
@@ -351,9 +351,9 @@ The right side is the emission's daily dollar value divided by the fee rate. Eve
 legible from there.
 
 A worked example, verified inputs and an illustrative conclusion. Emission's daily dollar value
-is $EP \approx 14{,}400 \times \$1.95 \approx \$28{,}080$/day \prov{derived}. At $f = 1\%$,
-net-deflationary needs gross fee-bearing volume $Ac > \$2.81$M/day, about \$1.0B/year
-\prov{illustrative}. At $f = 5\%$, above \$205M/year; at $f = 10\%$, above \$102M/year. Against
+is $EP \approx 12{,}050 \times \$1.58 \approx \$19{,}040$/day \prov{derived}. At $f = 1\%$,
+net-deflationary needs gross fee-bearing volume $Ac > \$1.90$M/day, about \$695M/year
+\prov{illustrative}. At $f = 5\%$, above \$139M/year; at $f = 10\%$, above \$70M/year. Against
 today's roughly \$476K/year of revenue, which is Lido and Aave yield rather than usage, that is
 the true size of the ask. The assumptions (constant price, fee taken in USD-equivalent and
 fully burned, all volume verified) do not hold exactly; the equation shows the shape, not a
@@ -374,7 +374,7 @@ risk, which is why ADOPT-03's timelock precedes any emission change.
 
 On \code{lux.exchange}, conditional on SEC approval of the proposed regulation \prov{pending}.
 Its job is price discovery, treasury, and protocol-owned liquidity, not a substitute for
-demand. The float is thin (depth about \$1.4M, 88.8\% protocol-owned, 24h volume about \$8.9k
+demand. The float is thin (depth about \$1.3M, mostly protocol-owned, 24h volume about \$57k
 \prov{verified}), and a raise deepens the book and funds the build-out of the fee-bearing
 utility. It does not manufacture usage. The raise should clear only into demonstrated on-chain
 revenue. Selling the token before the meter is honest and the utility exists is selling the
@@ -396,7 +396,7 @@ the token that holds its value. In that order.
 \label{sec:listing}
 %======================================================================
 
-ADOPT-06 named the venue problem and the order-book fix: a book that is 88.8\% protocol-owned,
+ADOPT-06 named the venue problem and the order-book fix: a book that is mostly protocol-owned,
 where a \$100k sell is eleven days of volume, and where a two-sided book replaces a passive
 reserve \prov{verified}. This section is the layer above the venue. It is about how MOR reaches a
 liquid market, what kind of market that is, and how far that market extends. Three moves, ordered
@@ -667,7 +667,7 @@ collateral, borrow a 1:1-pegged synthetic, let yield retire the debt on a time-d
 curated strategy adapters (Aave, Lido, Pendle, Morpho, Yearn). \textbf{Built, not deployed}. For
 Morpheus, an LMOR construction: self-repaying credit against MOR or against the roughly \$20M
 stETH \prov{verified} the treasury already holds, so holders borrow without selling into the
-\$8.9k/24h \prov{verified} volume.
+\$57k/24h \prov{verified} volume.
 
 \textbf{Lux Bank} (\code{lux/bank}, \code{lux/captable}). Accounts, cards, cap-table.
 \textbf{Built, not deployed}. A fiat and accounts on-ramp for the hosted-gateway audience,
@@ -939,7 +939,7 @@ producing measurable settled volume.
 Deploy governance (ADOPT-03): Safe plus Governor plus timelock with a nonzero delay floor, and a
 vMOR vote surface, closing CTL-2 and moving the seat of control off the bare multisig. Route the
 buyback's fuel to a fee on verified volume (ADOPT-08). List MOR on the LX order book to deepen a
-book that is 88.8\% protocol-owned (ADOPT-06). Deploy LMOR self-repaying credit against the idle
+book that is mostly protocol-owned (ADOPT-06). Deploy LMOR self-repaying credit against the idle
 stETH and MOR (ADOPT-04), and the bank rail for fiat-native consumers (ADOPT-05). Bridge MOR
 natively across the capital and compute domains and anchor state roots rather than replicating
 the schedule by hand (ADOPT-13). MOR the token, its emission, and its capital stay on Ethereum
