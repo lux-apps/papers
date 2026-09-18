@@ -20,7 +20,7 @@
 \luxcoverpage
 \sloppy
 
-\noindent{\color{muted}\footnotesize\sffamily ADOPT-10 \quad\textbullet\quad Hanzo AI, Lux Industries \& Zoo Labs \quad\textbullet\quad 2026}\par
+\noindent{\color{muted}\footnotesize\sffamily ADOPT-15 \quad\textbullet\quad Hanzo AI, Lux Industries \& Zoo Labs \quad\textbullet\quad 2026}\par
 \vspace{0.8ex}
 \noindent{\LARGE\bfseries From Chainless to Sovereign}\par
 \vspace{0.7ex}
@@ -166,7 +166,7 @@ miner, and local attestation (nvtrust, SPDM, RIM --- no cloud call). \emph{Worth
 with bonded operators, and a provider that earns MOR. \emph{Adopt:} the first rung --- Hanzo lists as a
 provider on Base through this.}
 
-\repo{lux/aivm}{\req}{The A-Chain: attestation, AI provenance, audit anchors. \emph{Worth:} TEE
+\repo{lux/aivm}{\gh{luxfi/aivm}}{The A-Chain: attestation, AI provenance, audit anchors. \emph{Worth:} TEE
 evidence a consensus can check, so a specific model on specific silicon is an on-chain fact rather than
 an off-chain report. \emph{Adopt:} the node's existing TEE work (RTMR3, signed manifest) becomes
 consensus-checkable at the L2 height.}
@@ -195,12 +195,12 @@ Interface under the SEC staff statement of 13 April 2026 --- it converts the use
 transaction the user signs; it never holds a key, executes, settles, or routes. \emph{Worth:} a listing
 today, and the issuance path when the proposed rules land. \emph{Adopt:} with the listing.}
 
-\repo{lux/liquid}{\req}{Self-repaying lending: deposit yield-bearing collateral, borrow synthetic
+\repo{lux/liquid}{\gh{luxfi/liquid}}{Self-repaying lending: deposit yield-bearing collateral, borrow synthetic
 debt, let the yield retire the debt. Adapters for Aave, Compound, Lido, Morpho, Pendle and others.
 \emph{Worth:} holders borrow against MOR without a forced sale; the treasury's idle assets work.
 \emph{Adopt:} the third rung, given the OFT address. A Morpho market is one transaction.}
 
-\repo{lux/bank}{\req}{Core banking: accounts, custody and self-custody, cards, beneficiaries, atomic
+\repo{lux/bank}{\gh{luxfi/bank}}{Core banking: accounts, custody and self-custody, cards, beneficiaries, atomic
 transfers. \emph{Worth:} MOR that spends. \emph{Adopt:} any height, after the listing.}
 
 \repo{luxfi/bridge}{\gh{luxfi/bridge}}{The bridge, run by a trustless MPC network. It already spans
@@ -231,7 +231,7 @@ discipline as \code{luxfi/kms}, one per organization.}
 routing and metering, RAG, a model hub. \emph{Worth:} Web2 demand arrives without a wallet, and it can be
 pointed at Morpheus providers. \emph{Adopt:} the sixth rung --- route agents through it.}
 
-\repo{hanzo/enso}{\req}{A learned router: the best model per request in roughly 300 nanoseconds to 12
+\repo{hanzo/enso}{\gh{hanzoai/enso}}{A learned router: the best model per request in roughly 300 nanoseconds to 12
 microseconds on CPU, with a content-free reward ledger. \emph{Worth:} Morpheus ships agent templates with no
 decentralized runtime behind them; this and the attested providers are that runtime, and our own demand
 becomes MOR volume.}
@@ -239,7 +239,7 @@ becomes MOR volume.}
 \repo{hanzoai/dev}{\gh{hanzoai/dev}}{A local AI coding agent for the terminal. \emph{Worth:} a real
 consumer of inference, and one that pays in MOR when routed to Morpheus providers.}
 
-\repo{hanzo/personas}{\req}{Six hundred and twelve persona profiles and their loaders. \emph{Worth:}
+\repo{hanzo/personas}{\gh{hanzoai/personas}}{Six hundred and twelve persona profiles and their loaders. \emph{Worth:}
 identity and prompt as catalog values, not code.}
 
 \repo{zooai/ai}{\gh{zooai/ai}}{Zoo's chat product. \emph{Worth:} a second consumer surface, run by a
@@ -349,7 +349,7 @@ climb is a series of decisions, each of which can be taken on its own evidence.
 \noindent{\color{rule}\rule{\linewidth}{1.1pt}}\par
 \vspace{0.6ex}
 \noindent{\color{muted}\footnotesize\sffamily
-ADOPT-10. The ladder is ADOPT-00; each rung has its own ADOPT brief; the full argument and provenance
+ADOPT-15. The ladder is ADOPT-00; each rung has its own ADOPT brief; the full argument and provenance
 are in the omnibus (\code{morpheus-omnibus.pdf}). \quad\textbullet\quad \texttt{research@lux.network}}
 
 \end{document}
